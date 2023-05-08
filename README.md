@@ -112,3 +112,40 @@ Mapping:
 >
 > - Code will run on each element in the right order
 > - Original array will be unaffected as map returns new array each call
+
+### Key Props
+
+Each child in a list should have a unique "key" prop.
+
+### Default Properties
+
+Can set default properties in component.
+
+### Props.children
+
+Can reference props.children to access nested components or values
+
+## JSX uses React.createElement
+
+> JSX simplifies syntax for nesting components.
+
+```
+const heading = <h1>Header 1</h1>
+=
+const heading = React.createElement("h1", null, "Header 1")
+```
+
+```
+const animal = <div>
+  <h1>Dogs</h1>
+  <Dog name='sumo' age={9}/>
+</div>
+=
+const animal =
+React.createElement("div", null,
+  React.createElement("div", null, "Dogs"),
+  React.createElement(Animal, {
+    name='sumo',
+    age=9
+}));
+```

@@ -8,3 +8,14 @@ const Animal = (props) => {
     </div>
   );
 };
+
+const AnimalWrap = (props) => {
+  return (
+    <div>
+      ☆*: .｡. o(≧▽≦)o .｡.:*☆
+      <h2>Animal List:</h2>
+      <p>{props.children}</p>
+      ☆*: .｡. o(≧▽≦)o .｡.:*☆
+    </div>
+  );
+};
