@@ -10,6 +10,7 @@ const AusShepherd = () => (
 function App() {
   return (
     <div>
+      <TodoList todos={["Walk the dog", "Feed the dog", "Play with the Dog"]} />
       <RandomChoice choices={["red", "green", "yellow"]} />
       <RandomNum />
       <RandomNum />

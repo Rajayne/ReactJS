@@ -54,7 +54,7 @@ class Hello extends React.Component {
 }
 ```
 
-## Propertiess
+## Properties
 
 Aka. props are used to configure a component and are immutable.
 Props can be strings, but other types must be embedded using curly braces.
@@ -69,5 +69,46 @@ Functional components can render:
 
 - A single valid DOM object
 - An array of DOM objects
-- Null (<i>cannot</i> return undefined)
-- Can have ternary operations i.e. boolean values
+- Null (_cannot_ return undefined)
+- Can have ternary operations i.e. boolean
+- Can have else if statements
+
+### Looping in JSX
+
+- Can pass array directly into JSX
+- Can use for loop ( to push elements into array)
+- Can use map
+
+```
+Direct:
+  const todos = [
+    <li>Walk the dog</li>,
+    <li>Feed the dog</li>,
+    <li>Play with the dog</li>,
+  ];
+  return (
+    <div>
+      <h4>Todo List</h4>
+      <ul>{todos}</ul>
+    </div>
+  );
+
+For Loop:
+  const todos = [];
+  for (let t of props.todos) {
+    todos.push(<li>{t}</li>)
+  }
+
+Mapping:
+  return (
+    <div>
+        <h4>Todo List</h4>
+        <ul>{props.todos.map(t => <li>{t}</li>)}</ul>
+    </div>
+  );
+```
+
+> Mapping is best because:
+>
+> - Code will run on each element in the right order
+> - Original array will be unaffected as map returns new array each call
