@@ -149,3 +149,19 @@ React.createElement("div", null,
     age=9
 }));
 ```
+
+# Create React App
+
+Used for:
+
+- Scaling files and components
+- Using third-parties libraries from npm
+- Detect common mistakes early
+- Live editing in CSS and JS in development
+- Optimizing output for production
+
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
